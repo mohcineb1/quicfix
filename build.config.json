@@ -1,0 +1,10 @@
+{
+  "outputPaths": {
+    "js": "dist/js",
+    "css": "dist/css"
+  },
+  "entry": {
+    "main": "src/index.js",
+    "vendor": "src/vendor.js"
+  }
+}
