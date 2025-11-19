@@ -1,0 +1,81 @@
+// Upcoming Events Carousel Styles
+.upcoming-events-carousel-section {
+  padding: 40px 0 20px;
+  border-bottom: 3px solid $gray-200;
+  margin-bottom: 54px;
+
+  .carousel-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+     .swiper-wrapper {
+      height: auto;
+    }
+  }
+
+  .upcoming-events-swiper {
+    width: 100%;
+    overflow: hidden;
+
+    .swiper-slide {
+      width: 340px;
+      transition: all 0.4s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 3;
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      opacity: 0.7;
+      pointer-events: auto;
+      z-index: 2;
+      &.card {
+        pointer-events: none;
+      }
+    }
+    .swiper-navigation-wrapper {
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: relative;
+      height: 30px;
+      width: 30px;
+      background-image: url('public/build/images/circle-arrow-right.svg');
+      
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      padding: 5px;
+      transition: opacity 0.15s ease;
+      &.swiper-button-prev { 
+        transform: rotate(180deg);
+      }
+      
+      &:hover {
+        opacity: 0.7;
+      }
+      &::before,&::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    .upcoming-events-swiper {
+      .swiper-slide {
+        width: 300px;
+      }
+    }
+  }
+}

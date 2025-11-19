@@ -1,0 +1,26 @@
+fos.Router.setData({
+    "base_url": "",
+    "routes": {
+        "app_event_registration": {
+            "tokens": [["variable", "\/", "[^\/]++", "id", true], ["text", "\/event\/registration"]],
+            "defaults": [],
+            "requirements": [],
+            "hosttokens": [],
+            "methods": ["GET", "POST"],
+            "schemes": []
+        },
+        "app_post_delete": {
+            "tokens": [["variable", "\/", "[^\/]++", "id", true], ["text", "\/post"]],
+            "defaults": [],
+            "requirements": [],
+            "hosttokens": [],
+            "methods": ["DELETE"],
+            "schemes": []
+        }
+    },
+    "prefix": "",
+    "host": "localhost",
+    "port": "",
+    "scheme": "http",
+    "locale": ""
+});

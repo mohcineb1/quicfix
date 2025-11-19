@@ -1,0 +1,700 @@
+// ===================================================================
+// EVENT SHOW PAGE STYLES
+// ===================================================================
+
+.event-show-page {
+  padding: 40px 0;
+  font-family: $font-main;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+// ===================================================================
+// EVENT HERO SECTION
+// ===================================================================
+
+.event-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    font-family: YWFTPoster-Medium, sans-serif;
+    font-size: $font-size-xxlarge;
+    font-weight: 600;
+    color: $black;
+    margin: 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+  }
+
+  &__meta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__price-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $black;
+
+    i {
+      color: $pink-primary;
+      font-size: 10px;
+    }
+  }
+
+  &__favorite-btn {
+    width: 41px;
+    height: 41px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    i {
+      font-size: 20px;
+      color: $black;
+    }
+
+    &:hover {
+      background: $pink-300;
+      border-color: $pink-primary;
+
+      i {
+        color: $pink-primary;
+      }
+    }
+  }
+
+  &__datetime {
+    display: flex;
+    gap: 24px;
+    margin: 8px 0;
+  }
+
+  &__datetime-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-main;
+    font-size: $font-size-baselarge;
+    font-weight: 600;
+    color: $black;
+
+    i {
+      font-size: 20px;
+      color: $black;
+    }
+  }
+
+  &__description {
+    font-family: $font-main;
+    font-size: $font-size-base;
+    font-weight: 300;
+    color: $gray-700;
+    line-height: 1.6;
+    margin: 12px 0;
+  }
+
+  &__capacity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+    font-family: $font-main;
+    font-size: $font-size-base;
+
+    strong {
+      font-weight: 600;
+      color: $black;
+    }
+  }
+
+  &__participants-count {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: $black;
+
+    i {
+      font-size: 18px;
+      color: $black;
+    }
+  }
+
+  &__edit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    background: $white;
+    border: 1px solid $black;
+    border-radius: 50px;
+    color: $black;
+    font-family: YWFTPoster-Medium, sans-serif;
+    font-size: $font-size-large;
+    text-decoration: none;
+    position: relative;
+    max-width: 380px;
+    transition: all 0.3s ease;
+
+    .btntitle {
+      flex: 1;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .arrowicon {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      background: $pink-primary;
+      border: 1px solid $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 14px;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: $pink-primary;
+      border-radius: 50px;
+      border: 1px solid $black;
+      position: absolute;
+      z-index: -1;
+      left: 4px;
+      top: 4px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    @include shadow-card;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: $pink-primary;
+    color: $white;
+    border: 1px solid $black;
+    border-radius: 50px;
+    padding: 6px 20px;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    font-weight: 600;
+    z-index: 2;
+  }
+}
+
+// ===================================================================
+// EVENT INFORMATION SECTION
+// ===================================================================
+
+.event-info-section {
+  margin-bottom: 60px;
+
+  &__title {
+    font-family: YWFTPoster-Medium, sans-serif;
+    font-size: $font-size-xlarge;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    color: $black;
+
+    i {
+      font-size: 20px;
+      color: $black;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    span {
+      line-height: 1.6;
+    }
+
+    &--price {
+      font-weight: 600;
+      font-size: $font-size-baselarge;
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__accessibility {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+
+    i {
+      font-size: 24px;
+      color: $black;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  }
+
+  &__accessibility-content {
+    strong {
+      display: block;
+      font-family: $font-main;
+      font-size: $font-size-base;
+      font-weight: 600;
+      color: $black;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-family: $font-main;
+      font-size: $font-size-small;
+      font-weight: 300;
+      color: $gray-700;
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+    }
+  }
+
+  &__transport-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .transport-tag {
+      background: $white;
+      border: 1px solid $gray-500;
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-family: $font-main;
+      font-size: 13px;
+      font-weight: 400;
+      color: $gray-500;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+  }
+
+  &__map-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    @include shadow-card;
+  }
+
+  &__favorite-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: $white;
+    border: 1px solid $black;
+    border-radius: 50px;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+
+    i {
+      font-size: 20px;
+      width: 41px;
+      height: 41px;
+      padding-top: 3px;
+      border: 1px solid $black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: $pink-primary;
+      border-radius: 50px;
+      border: 1px solid $black;
+      position: absolute;
+      z-index: -1;
+      left: 4px;
+      top: 4px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+// ===================================================================
+// CUSTOM MAP MARKER
+// ===================================================================
+
+.custom-map-marker {
+  background: transparent !important;
+  border: none !important;
+
+  svg {
+    color: $pink-primary;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+  }
+}
+
+// ===================================================================
+// MAP POPUP CARD
+// ===================================================================
+
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  @include shadow-card;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.map-popup-card {
+  background: $white;
+  border-radius: 20px;
+  padding: 16px 20px;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-size: $font-size-base;
+    font-weight: 600;
+    color: $black;
+    margin: 0 0 8px 0;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: $font-main;
+    font-size: $font-size-small;
+    font-weight: 400;
+    color: $gray-700;
+    margin: 0;
+
+    i {
+      font-size: 14px;
+      color: $pink-primary;
+    }
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $gray-500;
+    border-radius: 50%;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    i {
+      font-size: 10px;
+      color: $gray-700;
+    }
+
+    &:hover {
+      background: $gray-100;
+      border-color: $black;
+
+      i {
+        color: $black;
+      }
+    }
+  }
+
+  &__zoom {
+    width: 41px;
+    height: 41px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    background: $pink-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    i {
+      font-size: 16px;
+      color: $white;
+    }
+
+    &:hover {
+      background: $pink-500;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// ===================================================================
+// EVENT PHOTOS SECTION
+// ===================================================================
+
+.event-photos-section {
+  margin-bottom: 60px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-family: YWFTPoster-Medium, sans-serif;
+    font-size: $font-size-xlarge;
+    font-weight: 600;
+    color: $black;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $black;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    i {
+      font-size: 24px;
+      color: $black;
+      border: 1px solid $black;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      color: $pink-primary;
+
+      i {
+        color: $pink-primary;
+        border-color: $pink-primary;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    border-radius: 16px;
+    overflow: hidden;
+    @include shadow-card;
+    aspect-ratio: 4/3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .carousel-nav-btn {
+    width: 48px;
+    height: 48px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    i {
+      font-size: 20px;
+      color: $black;
+    }
+
+    &:hover {
+      background: $pink-primary;
+      border-color: $black;
+
+      i {
+        color: $white;
+      }
+    }
+
+    &--prev,
+    &--next {
+      // Specific styles if needed
+    }
+  }
+}
+
+// ===================================================================
+// RESPONSIVE STYLES
+// ===================================================================
+
+@media (max-width: 768px) {
+  .event-hero {
+    grid-template-columns: 1fr;
+
+    &__image-wrapper {
+      order: -1;
+    }
+
+    &__title {
+      font-size: $font-size-large;
+    }
+  }
+
+  .event-info-section {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__map {
+      height: 250px;
+    }
+  }
+
+  .event-photos-section {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+// Section Header Component Styles
+.section-header {
+  
+  &__wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      flex-direction: c;
+      align-items: baseline;
+    }
+  }
+  &__title {
+    color: $black;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex: 1;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    border: 1px solid $black;
+    background: $white;
+    font-family: YWFTPoster-Medium, sans-serif;
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 50px;
+    margin: 0;
+    margin-left: auto;
+    color: $black;
+    padding: 7px 8px;
+    position: relative;
+    text-align: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    max-width: 440px;
+    flex: 1;
+    &::before {
+      background: var(--color-primary, #007bff);
+      border: 1px solid $black;
+      border-radius: 34px;
+      content: "";
+      height: 100%;
+      left: 3px;
+      opacity: 0;
+      position: absolute;
+      top: 3.53px;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn-title {
+    flex: 1;
+    align-self: center;
+    margin-left: 8px;
+    padding: 4px 0 3px;
+  }
+
+  &__btn-icon {
+    background: var(--color-primary, #007bff);
+    border: 1px solid $black;
+    border-radius: 50%;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    vertical-align: middle;
+    width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__btn {
+      font-size: 18px;
+      padding: 5px 6px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__btn-icon {
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  // Search input styles
+  &__search {
+    display: flex;
+    align-items: center;
+    max-width: 440px;
+    flex: 1;
+    margin-left: auto;
+
+    .search-input-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__search-input {
+    border: 1px solid $black;
+    background: $white;
+    font-family: YWFTPoster-Medium, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 50px;
+    padding: 17.5px 60px 15px 20px;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:focus {
+      border-color: var(--color-primary, #007bff);
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 10px 50px 10px 16px;
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    right: 8px;
+    height: 41px;
+    width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 768px) {
+      height: 35px;
+      width: 35px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

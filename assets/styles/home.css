@@ -1,0 +1,1061 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+
+@font-face {
+  font-family: YWFTPoster-Medium;
+  src: url('../fonts/YWFT-Poster-Medium.otf');
+}
+
+@font-face {
+  font-family: YWFTPoster-Semi-Bold;
+  src: url('../fonts/YWFT-Poster-Semi-Bold.otf');
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
+  font-family: YWFTPoster-Medium;
+}
+
+figure {
+  margin: 0;
+}
+
+span,
+small {
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+}
+
+.footer-area a:hover {
+  opacity: 0.8;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+}
+
+::selection {
+  background: #3f8c32;
+  color: #ffffff;
+}
+
+::-webkit-selection {
+  background: #3f8c32;
+  color: #ffffff;
+}
+
+::selection {
+  background: #3f8c32;
+  color: #ffffff;
+}
+
+/* --------------------
+ Back to Top Button
+--------------------- */
+
+.scrollToTopBtn {
+  background-color: #fc9acb;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 0;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
+---------------
+Offcanvas
+---------------
+*/
+
+#offcanvasExample {
+  width: 320px;
+  z-index: 1090;
+}
+
+#offcanvasExample .offcanvas-header {
+  padding: 20px 16px;
+}
+
+#offcanvasExample .header-list > li {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0.2;
+}
+
+/*
+===========================
+header-area
+===========================
+*/
+
+.header-area {
+  margin-bottom: 0;
+  padding: 23px 17px;
+}
+
+.hdr-logo {
+  max-width: 100px;
+}
+
+.hdr-logo img {
+  width: 100%;
+}
+
+.header-area > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.header-nav-flex {
+  gap: 44px;
+  justify-content: space-between;
+}
+
+.header-list {
+  column-gap: 40px;
+  padding-bottom: 0;
+}
+
+.header-list li a {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: #262626;
+  padding: 6px 0;
+  position: relative;
+}
+
+.header-list li a.connecter-btn {
+  padding: 6px 8px;
+  font-size: 16px;
+  color: #000000;
+  border-radius: 34px;
+  border: 1px solid #000000;
+}
+
+.header-list li a.connecter-btn:hover {
+  background: #f18efa;
+}
+
+.connecter-btn small {
+  font-size: 16px;
+}
+
+.header-list li a:hover::before,
+.header-list li a.active::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #d800fc;
+  border-radius: 113px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header-list li a.connecter-btn::before {
+  display: none;
+}
+
+.header-list li a > img {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.header-list li a span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d800fc;
+  border: 1px solid #000000;
+  line-height: 34px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.header-list li a span img {
+  width: 14px;
+}
+
+a.title-button {
+  color: #000000;
+}
+
+a.title-button:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/*
+===========================
+banner-area
+===========================
+*/
+
+.banner-area {
+  margin-top: 22px;
+  padding: 63px 0;
+}
+
+.banner-area > img.bnr1 {
+  position: absolute;
+  left: 26px;
+  top: 0;
+}
+
+.banner-area > img.bnr2 {
+  position: absolute;
+  right: 26px;
+  top: 0;
+  width: 100px;
+}
+
+.banner-area > img.bnr3 {
+  position: absolute;
+  left: 86px;
+  bottom: 0;
+}
+
+.banner-area > img.bnr4 {
+  position: absolute;
+  right: 90px;
+  bottom: 0;
+}
+
+.banner-area h2 {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #000000;
+}
+
+.banner-area h2 span {
+  position: relative;
+}
+
+.banner-area h2 span img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.banner-area h2 span.pink-box {
+  position: relative;
+  color: #ffffff;
+  padding: 14px 28px 0;
+  line-height: 0.9;
+  background: #d800fc;
+  border-radius: 50px;
+}
+
+.banner-area h2 span.pink-box::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fa0581;
+  border-radius: 50px;
+  top: 3px;
+  left: 3px;
+  z-index: -1;
+}
+
+/* itembox */
+
+.colored-boxes {
+  padding: 56px 0;
+}
+
+.itembox {
+  padding: 10px 10px 15px;
+  border-radius: 34px;
+  border: 1px solid #000000;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  opacity: 1 !important;
+}
+
+.itembox::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 34px;
+  border: 1px solid #000000;
+  position: absolute;
+  z-index: -1;
+  left: 4px;
+  top: 4.53px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.itembox:hover::before {
+  opacity: 1;
+}
+
+.itembox:focus span {
+  transform: rotate(45deg);
+}
+
+.green-box {
+  background: #8ee897;
+}
+
+.purple-box {
+  background: #d800fc;
+}
+
+.rose-box {
+  background: #fa0581;
+}
+
+.orange-box {
+  background: #f68f2d;
+}
+
+.blue-box {
+  background: #56bbff;
+}
+
+/* .itembox span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  line-height: 40px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 0.3s ease;
+} */
+
+/* .itembox a:hover span {
+  background: #56bbff;
+} */
+
+.itembox span img {
+  width: 14px;
+}
+
+.itembox h4 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: center;
+  color: #000000;
+  margin-top: 52px;
+  min-height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/* comments-area */
+
+.comments-area {
+  padding: 22px 0;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.comments-area h3 {
+  margin-bottom: 60px;
+}
+
+.comnt-left {
+  padding-right: 85px;
+  text-align: center;
+}
+
+.comnt-right {
+  padding-left: 85px;
+}
+
+.comment > img {
+  width: 72%;
+  margin: 0 auto 20px;
+}
+
+.comment p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #3d3d3d;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.comment a {
+  font-family: YWFTPoster-Medium;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 5px;
+  font-size: 16px;
+  color: #000000;
+  border-radius: 34px;
+  border: 1px solid #000000;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+.comment a:hover {
+  color: #d800fc;
+}
+
+.comment a span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d800fc;
+  border: 1px solid #000000;
+  line-height: 34px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.comment a span img {
+  width: 14px;
+}
+
+small.cmnt-text {
+  width: calc(100% - 34px);
+}
+
+.comment1 p {
+  max-width: 344px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment2 p {
+  max-width: 286px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment3 {
+  max-width: 348px;
+  margin-left: auto;
+  padding-bottom: 178px;
+  margin-top: -20px;
+  padding-right: 62px;
+}
+
+.comment3 > img {
+  width: 187px;
+  margin-top: 20px;
+}
+
+.comment4 {
+  max-width: 412px;
+  text-align: center;
+  padding-left: 29px;
+  padding-bottom: 20px;
+}
+
+.comment4 > img {
+  width: 135px;
+}
+
+.comment5 > img {
+  width: 272px;
+}
+
+.comment6 > img {
+  width: 242px;
+}
+
+.curve-img {
+  position: absolute;
+  left: 38%;
+  bottom: 30px;
+  height: 74%;
+}
+
+.comment1 {
+  padding-bottom: 20px;
+}
+
+.comment2 {
+  padding-right: 9px;
+  padding-left: 63px;
+}
+
+.comment3 p {
+  max-width: 245px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment4 {
+}
+
+.comment5 p {
+  max-width: 252px;
+}
+
+.comment5 {
+  padding-bottom: 194px;
+  padding-right: 52px;
+}
+
+.commencer-btn {
+  width: 204px;
+  margin: 0 auto;
+  margin-top: 55px;
+  font-size: 22px;
+  padding: 7px 10px !important;
+}
+
+.commencer-btn:hover {
+  color: #d800fc;
+}
+
+/*
+======================
+interest-area
+======================
+*/
+
+.interest-area {
+  padding: 60px 0 10px;
+  position: relative;
+}
+
+.interest-area > img {
+  position: absolute;
+  top: -160px;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.interest-left {
+  padding-right: 12px;
+  text-align: center;
+}
+
+.interest-left h3 {
+  color: #000000;
+  margin: 0;
+}
+
+.interest-left p {
+  font-size: 15px;
+  font-weight: 300;
+  color: #000000;
+  max-width: 296px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.interest-left p strong {
+  font-family: YWFTPoster-Semi-Bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+.interest-left h5 {
+  font-size: 16px;
+  color: #000000;
+}
+
+.interest-left h5 img {
+  margin-right: 10px;
+  width: 28px;
+}
+
+.interest-form {
+  position: relative;
+}
+
+.interest-form label::before {
+  content: '';
+  border-radius: 20px;
+  border: 1px solid #000000;
+  background: #ffffff;
+  margin-left: 0;
+  border-bottom: none;
+  width: 96px;
+  height: 30px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.interest-form label::after {
+  content: '';
+  border-radius: 0;
+  background: #ffffff;
+  margin-left: 0;
+  border-bottom: none;
+  width: 96px;
+  height: 10px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: calc(100% - 7px);
+}
+
+.interest-form label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: left;
+  color: #1e1e1e;
+  padding: 4px 21px;
+  border-radius: 20px;
+  position: relative;
+  margin-left: 21px;
+  z-index: 1;
+  border-bottom: none;
+  background: #ffffff;
+  margin-top: 1px;
+}
+
+.interest-form label sup {
+  color: #fa0581;
+}
+
+.interest-form > img {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+}
+
+.interest-form input {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19.5px;
+  text-align: left;
+  color: #1e1e1e;
+  padding: 10px 50px 10px 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  width: 100%;
+  margin-top: -12px;
+  position: relative;
+  z-index: 0;
+}
+
+::placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+.arrow-btn {
+  font-family: YWFTPoster-Medium;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 5px 4px 32px;
+  font-size: 16px;
+  color: #000000;
+  border-radius: 34px;
+  border: 1px solid #000000;
+  background: #ffffff;
+  margin-top: 35px;
+  position: relative;
+}
+
+.arrow-btn:hover {
+  /*! color: #D800FC; */
+}
+
+.arrow-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d800fc;
+  border: 1px solid #000000;
+  line-height: 34px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.arrow-icon img {
+  width: 14px;
+}
+
+/*
+=============
+find area
+=============
+*/
+
+.find-area h3 {
+  margin-bottom: 30px;
+}
+
+.find1 {
+  position: relative;
+
+  /*! margin-bottom: 22px; */
+  display: block;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.find1 > img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.find-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px 18px;
+  align-items: center;
+}
+
+.find1 .arrow-btn {
+  text-align: left;
+  padding: 8px 30px;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.find1 .arrow-btn strong {
+  font-size: 22px;
+  margin-bottom: 4px;
+  display: inline-block;
+  font-family: YWFTPoster-Medium;
+  font-weight: 500;
+}
+
+.find1 .arrow-icon {
+  outline: 8px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 9px !important;
+}
+
+.arrow-btn::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #d800fc;
+  border-radius: 34px;
+  border: 1px solid #000000;
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 3.53px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.find1:hover .arrow-btn::before {
+  opacity: 1;
+}
+
+.find1:focus .arrow-icon {
+  transform: rotate(45deg);
+}
+
+.yellow-box {
+  background: #ebf17a;
+}
+
+.rose-box {
+  background: #fa0581;
+}
+
+.blue-box {
+  background: #56bbff;
+}
+
+.green-box {
+  background: #8ee897;
+}
+
+.yellow .arrow-btn::before {
+  background: #ebf17a;
+}
+
+.rose .arrow-btn::before {
+  background: #fa0581;
+}
+
+.blue .arrow-btn::before {
+  background: #56bbff;
+}
+
+.green .arrow-btn::before {
+  background: #8ee897;
+}
+
+.find-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.inr-find {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inr-find > div {
+  height: calc(50% - 10px);
+  width: 100%;
+}
+
+.catalogue-btn .arrow-btn {
+  font-size: 22px;
+  font-family: YWFTPoster-Medium;
+  font-weight: 500;
+  padding: 7px 10px 7px 32px;
+  position: relative;
+}
+
+.catalogue-btn .arrow-btn small {
+  margin: 0 10px;
+}
+
+.catalogue-btn .arrow-icon {
+  width: 41px;
+  height: 41px;
+  line-height: 41px;
+}
+
+.catalogue-btn .arrow-btn::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #d800fc;
+  border-radius: 34px;
+  border: 1px solid #000000;
+  position: absolute;
+  z-index: -1;
+  left: 4px;
+  top: 4.53px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.catalogue-btn .arrow-btn:hover::before {
+  opacity: 1;
+}
+
+.catalogue-btn .arrow-btn:focus span.arrow-icon {
+  transform: rotate(45deg);
+}
+
+/*
+=====================
+pourquoi-coop-area
+=====================
+*/
+
+.pourquoi-coop-area {
+  padding: 115px 0 120px;
+}
+
+.pourquoi-coop-area .container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.pourquoi-coop-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 30px;
+}
+
+.pourquoi-coop-content h2 {
+  font-family: YWFTPoster-Semi-Bold;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48.88px;
+  color: #000000;
+}
+
+.pourquoi-coop-content h2 span {
+  font-weight: 600;
+}
+
+.pourquoi-coop-content p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #000000;
+}
+
+.pourquoi-coop-content p span {
+  font-weight: 500;
+  font-family: YWFTPoster-Semi-Bold;
+}
+
+/*
+=====================
+footer-area
+=====================
+*/
+
+.footer-area {
+  background-image: url('../images/footer-bg-2.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  /* padding: 120px 0; */
+  min-height: 490px;
+  position: relative;
+  z-index: 10;
+  padding-top: 10%;
+}
+
+.footer-area .container {
+  background-color: #000000;
+}
+
+.footer-area::after {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.ftr-content p span {
+  font-size: 15px;
+  font-family: YWFTPoster-Medium;
+}
+
+.ftr-content h3 {
+  font-family: YWFTPoster-Medium;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30.55px;
+  color: #ffffff;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.ftr-content p,
+.ftr-content ul li a {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19.5px;
+  color: #ffffff;
+  margin: 0 0 4px;
+  font-family: Poppins, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.ftr-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.ftr-content ul li a span {
+  font-weight: 600;
+  font-family: YWFTPoster-Medium;
+}
+
+.link__grid {
+  display: flex;
+  column-gap: 14px;
+}

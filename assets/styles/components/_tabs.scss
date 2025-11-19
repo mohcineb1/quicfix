@@ -1,0 +1,95 @@
+// Tabs Component Styles
+
+.tabs-container {
+    margin-top: 2rem;
+    .nav-tabs-modern {
+        border-bottom: 2px solid #e9ecef;
+        margin-bottom: 2rem;
+        @include shadow-soft;
+    .nav-item {
+        flex: 1;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        font-family: $font-main;
+        font-size: 16px;
+        border: none;
+        color: $black;
+        font-weight: 500;
+        padding: 24px;
+        margin-bottom: -2px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: transparent;
+
+        &:hover {
+            font-weight: 700;
+        }
+
+        &.active {
+            border-bottom: 2px solid var(--color-primary, #007bff);
+            font-weight: 700;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+// Tab Content Wrapper
+.tab-content-wrapper {
+    min-height: 400px;
+    position: relative;
+}
+
+// Loading State
+.tab-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+
+    .spinner-border {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+}
+
+.white-box {
+  background-color: $white;
+}
+
+// Fade-in Animation
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .nav-tabs-modern {
+        .nav-link {
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .tabs-container {
+        margin-top: 1rem;
+    }
+}

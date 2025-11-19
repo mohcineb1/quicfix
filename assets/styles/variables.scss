@@ -1,0 +1,74 @@
+// ===================================================================
+// 1. COLOR PALETTE
+// ===================================================================
+
+// --- Greyscale ---
+$white:        #FFFFFF;
+$gray-100:     #EFEFEF;
+$gray-200:     #EDEDED;
+$gray-300:     #EAEAEA;
+$gray-400:     #D8D8D8;
+$gray-500:     #666666;
+$gray-600:     #444444;
+$gray-700:     #3D3D3D;
+$gray-900:     #262626;
+$black:        #000000;
+
+// --- Pinks ---
+$pink-300:     #FF9FD0;
+$pink-500:     #FF63B2;
+$pink-primary: #FA0581;
+
+// --- Purples / Violets ---
+$purple-300:   #EB74FF;
+$purple-primary: #C245D4;
+$purple-600:   #D800FC;
+
+// --- Greens ---
+$green-400:    #34C341;
+$green-500:    #05B516;
+$green-primary: #33945B;
+
+// --- Blues ---
+$blue-300:     #56BBFF;
+$blue-primary: #2F7FD1;
+
+// --- Yellows ---
+$yellow-primary: #EBF17A;
+
+// --- Shadow ---
+$color-shadow: rgba(0, 0, 0, 0.25);
+
+// --- Primary Color ---
+$color-primary: $pink-primary;
+
+// ===================================================================
+// 2. TYPOGRAPHY
+// ===================================================================
+$font-main:    'Poppins', sans-serif;
+$font-display: 'YWFT Poster', sans-serif;
+
+$font-size-small:   13px;
+$font-size-base:    14px;
+$font-size-baselarge:    18px;
+$font-size-medium:  20px;
+$font-size-large:   22px;
+$font-size-xlarge:  30px;
+$font-size-xxlarge: 40px;
+
+// ===================================================================
+// 3. SPACING
+// ===================================================================
+$spacing-xs:   6px;
+$spacing-sm:   8px;
+$spacing-md:   10px;
+$spacing-lg:   13px;
+$spacing-xl:   16px;
+$spacing-xxl:  27px;
+
+// ===================================================================
+// 4. BORDER RADIUS
+// ===================================================================
+$border-radius-sm:  3px;
+$border-radius-md:  34px;
+$border-radius-lg:  40px;
