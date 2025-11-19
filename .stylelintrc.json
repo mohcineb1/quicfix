@@ -1,0 +1,1 @@
+{"extends": "stylelint-config-standard","rules": {"at-rule-no-unknown": [true, {"ignoreAtRules": ["include", "mixin", "extend"]}],"declaration-colon-space-after": ["always", {"ignore": ["after-property"]}],"no-empty-source": null}}
