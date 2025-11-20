@@ -1,70 +1,45 @@
+// Import vendor styles
 @import '../../node_modules/bootstrap/scss/bootstrap';
-
-// Import styles
 @import '../../node_modules/toastr/toastr';
-
 @import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 @import '../../node_modules/leaflet/dist/leaflet.css';
-
 @import '../../node_modules/tom-select/dist/css/tom-select.bootstrap5.css';
+@import '../../node_modules/flatpickr/dist/flatpickr.min.css';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+
+// Import custom styles
 @import 'variables';
-
 @import 'utilities';
-@import './components/choices_div';
 
+// Import component styles
+@import './components/choices_div';
 @import './components/flatpickr';
 @import './components/font-headings';
 @import './components/upcoming-events-carousel-section';
-
-@import './components/cards';
-@import './components/tabs';
-
-@import './components/paginator';
-@import './components/section_header';
-
-@import './components/navigation_cards';
-@import './components/event_show';
-
-@import './events';
-@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
-
-@import '../../node_modules/bootstrap/scss/bootstrap';
-
-$s2bs5-border-color: $border-color;
-
-@import '~leaflet/dist/leaflet.css';
-@import '../../node_modules/toastr/toastr';
-@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-@import 'variables';
-@import 'utilities';
-@import './components/choices_div';
-@import './components/flatpickr';
-@import './components/upcoming-events-carousel-section';
 @import './components/cards';
 @import './components/tabs';
 @import './components/paginator';
 @import './components/section_header';
 @import './components/navigation_cards';
 @import './components/event_show';
-@import '~tom-select/dist/css/tom-select.bootstrap5.css';
-@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
 
-// Import events styles
+// Import page styles
 @import './events';
 
+// Custom fonts
 @font-face {
   font-family: 'YWFTPoster-Regular';
-  src: url('file:///C:/Users/MohcineBentekouk/Documents/static-newlist/assets/fonts/YWFT-Poster-Regular.otf');
+  src: url('../fonts/YWFT-Poster-Regular.otf');
 }
 
 @font-face {
   font-family: 'YWFTPoster-Medium';
-  src: url('file:///C:/Users/MohcineBentekouk/Documents/static-newlist/assets/fonts/YWFT-Poster-Medium.otf');
+  src: url('../fonts/YWFT-Poster-Medium.otf');
 }
 
 @font-face {
   font-family: 'YWFTPoster-Semi-Bold';
-  src: url('file:///C:/Users/MohcineBentekouk/Documents/static-newlist/assets/fonts/YWFT-Poster-Semi-Bold.otf');
+  src: url('../fonts/YWFT-Poster-Semi-Bold.otf');
 }
 
 

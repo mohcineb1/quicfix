@@ -130,7 +130,7 @@
     top: 15px;
     height: 26px;
     width: 26px;
-    background-image: url('public/build/images/circle-arrow-right.svg');
+    background-image: url('../images/circle-arrow-right.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -146,7 +146,7 @@
     top: 15px;
     height: 26px;
     width: 26px;
-    background-image: url('public/build/images/circle-arrow-left.svg');
+    background-image: url('../images/circle-arrow-left.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -199,7 +199,7 @@
             .flatpickr-time-scroll-btn, .flatpickr-time-scroll-down{
                 height: 27px;
                 width: 27px;
-                background-image: url('public/build/images/circle-arrow-right.svg');
+                background-image: url('../images/circle-arrow-right.svg');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 99%;
@@ -273,7 +273,7 @@
     font-size: 14px;
     font-weight: 500;
     color: $gray-500;
-    background: url('public/build/images/icon-calendar.svg') no-repeat 94%;
+    background: url('../images/icon-calendar.svg') no-repeat 94%;
     
     background-size: 18px 18px;
     cursor: pointer;
@@ -288,7 +288,7 @@
         @include shadow-soft;
     }
    &.flatpickr-time-picker-input {
-    background: url('public/build/images/horloge.svg') no-repeat 94%;
+    background: url('../images/horloge.svg') no-repeat 94%;
    }
 
    

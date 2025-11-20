@@ -1,0 +1,2 @@
+/*! For license information please see app.js.LICENSE.txt */
+(self.webpackChunk=self.webpackChunk||[]).push([["app"],{"./src/index.js":()=>{document.addEventListener("DOMContentLoaded",function(){console.log("Webpack Encore dev server is running!")})}},e=>{e(e.s="./src/index.js")}]);
