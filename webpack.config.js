@@ -35,9 +35,16 @@ module.exports = (env, argv) => {
                         {
                             loader: 'sass-loader',
                             options: {
+                                api: 'modern', // Use the modern Sass API
                                 sourceMap: !isProduction,
                                 sassOptions: {
                                     quietDeps: true, // Suppress deprecation warnings from dependencies
+                                    silenceDeprecations: [
+                                        'legacy-js-api',
+                                        'import',
+                                        'global-builtin',
+                                        'color-functions'
+                                    ],
                                     verbose: false
                                 }
                             }
