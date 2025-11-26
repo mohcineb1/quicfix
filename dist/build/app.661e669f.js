@@ -1,1 +1,0 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[524],{980:()=>{document.addEventListener("DOMContentLoaded",function(){console.log("Webpack Encore dev server is running!")})}},e=>{e(e.s=980)}]);
