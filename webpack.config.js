@@ -2,9 +2,21 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const glob = require('glob');
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
+
+    // Automatically find all HTML files in the root directory
+    const htmlFiles = glob.sync('./*.html');
+    const htmlPlugins = htmlFiles.map(file => {
+        const filename = path.basename(file);
+        return new HtmlWebpackPlugin({
+            template: file,
+            filename: filename,
+            inject: 'body',
+        });
+    });
 
     return {
         mode: isProduction ? 'production' : 'development',
@@ -80,11 +92,7 @@ module.exports = (env, argv) => {
             new MiniCssExtractPlugin({
                 filename: isProduction ? 'css/[name].[contenthash].css' : 'css/[name].css',
             }),
-            new HtmlWebpackPlugin({
-                template: './index.html',
-                filename: 'index.html',
-                inject: 'body',
-            }),
+            ...htmlPlugins,
             new CopyWebpackPlugin({
                 patterns: [
                     { 
