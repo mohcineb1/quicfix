@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article - Coop'Huma</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .avatar {
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .date {
+    color: rgb(164, 164, 164);
+    font-size: 10pt;
+    margin-top: 10px;
+  }
+
+  .article-header {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .card-img {
+    height: 150px;
+    width: 100%;
+    background-color: rgb(206, 206, 206);
+  }
+
+  .subtitle {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .tags {
+    margin-top: 15px;
+  }
+
+  .tags span {
+    background: #f2f2f2;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 0 6px;
+  }
+
+  .hero-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+
+  .author-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 30px;
+  }
+
+  .author-photo {
+    width: 45px;
+    border-radius: 50%;
+  }
+
+  .article-content {
+    margin: auto;
+    padding: 1px 30px;
+    color: #333;
+  }
+
+  .align {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .a {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    padding-top: 30px;
+  }
+
+  .related {
+    padding: 1px 30px;
+    background-image: url('./blog_article/Frame.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .related h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .icard__description {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #3D3D3D;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    flex: 1;
+  }
+  .icard__text {
+    font-family: "Poppins", sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    color: #444444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .footer {
+    background: #000;
+    color: white;
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 40px;
+  }
+
+  .footer h4 {
+    margin-bottom: 15px;
+  }
+
+  .footer .socials {
+    margin-top: 10px;
+  }
+</style>
+
+<body>
+
+  <section class="article-header">
+    <div class="align">
+      <div class="a" style="font-size: 50pt;">
+        <img src="./blog_article/arrow.png" width="25px">
+      </div>
+      <h1 style="text-align: center;">Retour sur la Trocante de l’Édicule</h1>
+    </div>
+    <p class="subtitle mt-3 mb-3" style="text-align: center;">Metus vitae morbi adipiscing ut risus quisque
+      scelerisque.ae morbi
+      adipiscing ut risus quisque. risus quisque scelerisque.ae morbi adipiscing ut.</p>
+
+    <div data-controller="tag-filter" data-tag-filter-show-more-text-value="Show more"
+      data-tag-filter-show-less-text-value="Show less" data-tag-filter-visible-count-value="2"
+      class="tag-filter-container">
+      <div class="tag-buttons-wrapper d-flex justify-content-center data-tag-filter-target=" wrapper">
+        <div class="tag-button-item  m-2" data-tag-filter-target="tagItem" data-index="1">
+          <span class="card__tag">Evénement</span>
+        </div>
+        <div class="tag-button-item m-2" data-tag-filter-target="tagItem" data-index="2">
+          <span class="card__tag">Trocante</span>
+        </div>
+        <div class="tag-button-item m-2" data-tag-filter-target="tagItem" data-index="2">
+          <span class="card__tag">Economie circulaire</span>
+        </div>
+      </div>
+    </div>
+
+
+    <img src="./blog_article/blog_img.png" width="100%" class="hero-img" alt="Image article">
+  </section>
+
+  <section class="author-box">
+    <img src="./blog_article/user.png" class="author-photo" />
+    <div>
+      <p class="author-name">Alexandra R.</p>
+      <p class="date" style="color: rgb(164, 164, 164);margin-top: -20px;">14 septembre 2025</p>
+    </div>
+  </section>
+
+  <div class="article-content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit
+    amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper
+    congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl
+    sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+    Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent
+    blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci
+    luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas
+    adipiscing ante non diam sodales hendrerit.
+
+    Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla
+    sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae
+    ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis
+    metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non
+    mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam.
+    Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et
+    tristique ligula justo vitae magna.
+
+    Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac
+    euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec
+    felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt
+    tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem
+    varius purus. Curabitur eu amet.</div>
+
+  <section class="related" style="margin-top: 100px">
+    <h2>LIRE <span class="underline-svg">AUSSI...</span></h2>
+    <!--<div class="cards">
+      <article class="card">
+        <div class="card-img"> </div>
+        <div class="card-tags" style="padding-top: 15px;">
+          <span>Événement</span><span>Économie circulaire</span>
+        </div>
+        <p class="date">Date de l’article</p>
+        <h3>Titre de l’article</h3>
+        <p class="text">Metus vitae morbi adipiscing ut risus quisque scelerisque.ae morbi adipiscing ut risus quisque.
+          risus quisque scelerisque.ae morbi adipiscing ut.</p>
+        <div class="d-flex justify-content-end">
+          <button class="card__action-btn card__action-btn--link">
+            <span>
+              <img src="img/home/arrow.png">
+            </span>
+          </button>
+      </article>
+      <article class="card">
+        <div class="card-img"> </div>
+        <div class="card-tags" style="padding-top: 15px;">
+          <span>Événement</span><span>Économie circulaire</span>
+        </div>
+        <p class="date">Date de l’article</p>
+        <h3>Titre de l’article</h3>
+        <p class="text">Metus vitae morbi adipiscing ut risus quisque scelerisque.ae morbi adipiscing ut risus quisque.
+          risus quisque scelerisque.ae morbi adipiscing ut.</p>
+        <div class="d-flex justify-content-end">
+          <button class="card__action-btn card__action-btn--link">
+            <span>
+              <img src="img/home/arrow.png">
+            </span>
+          </button>
+      </article>
+      <article class="card">
+        <div class="card-img"> </div>
+        <div class="card-tags" style="padding-top: 15px;">
+          <span>Événement</span><span>Économie circulaire</span>
+        </div>
+        <p class="date">Date de l’article</p>
+        <h3>Titre de l’article</h3>
+        <p class="text">Metus vitae morbi adipiscing ut risus quisque scelerisque.ae morbi adipiscing ut risus quisque.
+          risus quisque scelerisque.ae morbi adipiscing ut.</p>
+        <div class="d-flex justify-content-end">
+          <button class="card__action-btn card__action-btn--link">
+            <span>
+              <img src="img/home/arrow.png">
+            </span>
+          </button>
+        </div>
+      </article>
+    </div>-->
+    <div class="row d-flex justify-content-center">
+
+      <div class="col-12 col-md-3 card m-3 p-0">
+        <div class="card__image-wrapper" style="height: 200px;">
+          <img src="https://placehold.co/600x400?text=Trocante 2" alt="Trocante 2" class="card__image">
+        </div>
+        <div class="card__content">
+          <div class="card__info">
+            <div data-controller="tag-filter" data-tag-filter-show-more-text-value="Show more"
+              data-tag-filter-show-less-text-value="Show less" data-tag-filter-visible-count-value="2"
+              class="tag-filter-container">
+              <div class="tag-buttons-wrapper d-flex" data-tag-filter-target="wrapper">
+                <div class="tag-button-item m-1" data-tag-filter-target="tagItem" data-index="1">
+                  <span class="card__tag">lecture</span>
+                </div>
+                <div class="tag-button-item m-1" data-tag-filter-target="tagItem" data-index="2">
+                  <span class="card__tag">course</span>
+                </div>
+              </div>
+            </div>
+            <div class="icard__description mb-2 mt-2">Trocante 2</div>
+            <div class="card__title">Trocante 2</div>
+            <div class="icard__text">Metus vitae morbi adipiscing ut risus quisque scelerisque.ae morbi adipiscing ut risus quisque. risus quisque scelerisque.ae morbi adipiscing ut.</div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center mt-4">
+            <div class="card__footer">
+              <a href="/event/show/019a5813-c52d-7858-9aea-21301803b833"
+                class="card__action-btn card__action-btn--link" style="background-color: #EBF17A;">
+                <span class="arrowicon"><img src="img/home/arrow.png" alt="image"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 card m-3 p-0">
+        <div class="card__image-wrapper" style="height: 200px;">
+          <img src="https://placehold.co/600x400?text=Trocante 2" alt="Trocante 2" class="card__image">
+        </div>
+        <div class="card__content">
+          <div class="card__info">
+            <div data-controller="tag-filter" data-tag-filter-show-more-text-value="Show more"
+              data-tag-filter-show-less-text-value="Show less" data-tag-filter-visible-count-value="2"
+              class="tag-filter-container">
+              <div class="tag-buttons-wrapper d-flex" data-tag-filter-target="wrapper">
+                <div class="tag-button-item m-1" data-tag-filter-target="tagItem" data-index="1">
+                  <span class="card__tag">lecture</span>
+                </div>
+                <div class="tag-button-item m-1" data-tag-filter-target="tagItem" data-index="2">
+                  <span class="card__tag">course</span>
+                </div>
+              </div>
+            </div>
+            <div class="icard__description mb-2 mt-2">Trocante 2</div>
+            <div class="card__title">Trocante 2</div>
+            <div class="icard__text">Metus vitae morbi adipiscing ut risus quisque scelerisque.ae morbi adipiscing ut risus quisque. risus quisque scelerisque.ae morbi adipiscing ut.</div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center mt-4">
+            <div class="card__footer">
+              <a href="/event/show/019a5813-c52d-7858-9aea-21301803b833"
+                class="card__action-btn card__action-btn--link" style="background-color: #EBF17A;">
+                <span class="arrowicon"><img src="img/home/arrow.png" alt="image"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 card m-3 p-0">
+        <div class="card__image-wrapper" style="height: 200px;">
+          <img src="https://placehold.co/600x400?text=Trocante 2" alt="Trocante 2" class="card__image">
+        </div>
+        <div class="card__content">
+          <div class="card__info">
+            <div data-controller="tag-filter" data-tag-filter-show-more-text-value="Show more"
+              data-tag-filter-show-less-text-value="Show less" data-tag-filter-visible-count-value="2"
+              class="tag-filter-container">
+              <div class="tag-buttons-wrapper d-flex" data-tag-filter-target="wrapper">
+                <div class="tag-button-item m-1" data-tag-filter-target="tagItem" data-index="1">
+                  <span class="card__tag">lecture</span>
+                </div>
+                <div class="tag-button-item m-1" data-tag-filter-target="tagItem" data-index="2">
+                  <span class="card__tag">course</span>
+                </div>
+              </div>
+            </div>
+            <div class="icard__description mb-2 mt-2">Trocante 2</div>
+            <div class="card__title">Trocante 2</div>
+            <div class="icard__text">Metus vitae morbi adipiscing ut risus quisque scelerisque.ae morbi adipiscing ut risus quisque. risus quisque scelerisque.ae morbi adipiscing ut.</div>
+          </div>
+          <div class="d-flex justify-content-end align-items-center mt-4">
+            <div class="card__footer">
+              <a href="/event/show/019a5813-c52d-7858-9aea-21301803b833"
+                class="card__action-btn card__action-btn--link" style="background-color: #EBF17A;">
+                <span class="arrowicon"><img src="img/home/arrow.png" alt="image"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+
+</html>
